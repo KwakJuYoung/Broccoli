@@ -23,6 +23,7 @@
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/main/main.css">
+      <link rel="stylesheet" href="app/search/search.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
@@ -32,8 +33,27 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+
+
+    <header class="hero-unit" id="banner">
+      <div class="container">
+        <h1>'Allo, 'Allo!</h1>
+        <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+        <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+      </div>
+    </header>
+    <div ng-include="'components/navbar/navbar.html'"></div>
     <!-- Add your site or application content here -->
     <div ui-view=""></div>
+
+
+    <footer class="footer">
+      <div class="container">
+        <p>Angular Fullstack v2.1.1 |
+          <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+          <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+      </div>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -65,9 +85,9 @@
       <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
 
-        
+
         <!-- build:js(.tmp) app/app.js -->
-        
+
         <script src="app/app.js"></script>
           <!-- injector:js -->
           <script src="app/account/account.js"></script>
@@ -78,6 +98,8 @@
           <script src="app/admin/admin.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
+          <script src="app/search/search.controller.js"></script>
+          <script src="app/search/search.js"></script>
           <script src="components/auth/auth.service.js"></script>
           <script src="components/auth/user.service.js"></script>
           <script src="components/modal/modal.service.js"></script>

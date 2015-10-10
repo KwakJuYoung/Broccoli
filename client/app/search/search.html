@@ -1,0 +1,33 @@
+<div class="container">
+  <div>
+    <p class="input-group">
+    <input type="text" class="form-control" placehlder="검색할 태그를 입력하세요." ng-model="searchingTag">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="searchTag()">
+          <span class="glyphicon glyphicon-search"/>
+        </button>
+      </span>
+    </p>
+  </div>
+
+  <div class="searched-tag-container">
+    <ul>
+      <li  ng-repeat="targetTag in targetTags" >
+        <searchedtag tag-name="{{targetTag.name}}"
+                     default-tag="{{targetTag.defaultTag}}"
+                     is-active="targetTag.isActive"
+                     show-tags="showTargetTags()"
+                     remove-tag="removeTag($index)"/>
+      </li>
+    </ul>
+  </div>
+
+  <div class="search-result-container">
+    <ul>
+      <li ng-repeat="searchResult in searchResults">
+        <p> {{searchResult.tagName}} </p>
+        <p> {{searchResult.count}} </p>
+      </li>
+    </ul>
+  </div>
+</div>
